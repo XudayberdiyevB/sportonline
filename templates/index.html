@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sport Do'koni 24/7 {% endblock title %}
+
+{% block content %}
+
+<section >
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1> Sport do'konga <br><strong class="color">Xush kelibsiz</strong></h1>
+                              <p>Bizning sayt orqali yuqori sifatli sport mahsulotlarini online sotib olishingiz mumkin</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Sotib olish</a>
+                              <a class="btn btn-lg btn-primary" href="{% url 'shop:about' %}" role="button"> Ma'lumot </a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/boksing-gloves.png' %}" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1> Sport do'konga <br><strong class="color">Xush kelibsiz</strong>
+                              <p>Bizning sayt orqali yuqori sifatli sport mahsulotlarini online sotib olishingiz mumkin</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Sotib olish</a>
+                              <a class="btn btn-lg btn-primary" href="{% url 'shop:about' %}" role="button"> Ma'lumot </a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box ">
+                              <figure><img src="{% static 'images/boksing-gloves.png' %}" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1> Sport do'konga <br><strong class="color">Xush kelibsiz</strong>
+                              <p>Bizning sayt orqali yuqori sifatli sport mahsulotlarini online sotib olishingiz mumkin</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Sotib olish</a>
+                              <a class="btn btn-lg btn-primary" href="{% url 'shop:about' %}" role="button"> Ma'lumot </a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/boksing-gloves.png' %}" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class='fa fa-angle-left'></i></a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class='fa fa-angle-right'></i>
+            </a>
+         </div>
+      </section>
+      <!-- plant -->
+      <div id="plant" class="section  product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2><strong class="black"> Sport</strong>  Mahsulotari</h2>
+                     <span>Kerakli mahsulotni tanlang</span>
+                     <button type="button" class="btn btn-primary mt-3"><a href="{% url 'shop:add' %}" style="color: #fff">+ Qo'shish</a></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+         <div class="clothes_main section ">
+          <div class="container">
+            <div class="row">
+               {% for product in products %}
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <a href="{% url 'shop:detail' product.pk %}">
+                     <div class="sport_product">
+                        <figure><img src="{{product.image.url}}" alt="img"/></figure>
+                        <h3> <strong class="price_text">{{product.cost}}</strong></h3>
+                        <h4>{{product.name}}</h4>
+                     </div>
+                  </a>
+               </div>
+               {% endfor %}             
+             </div>
+            </div>
+           </div>
+      </div>
+      <!-- end plant -->
+      <!--about -->
+      <div class="section about ">
+         <div class="container">
+             <div class="row">
+                <div class="col-12">
+                    <div class="titlepage">
+                     <h2><strong class="black"> Biz</strong>  Haqimizda</h2>                     
+                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</span>
+                  </div>
+                </div>
+             </div>
+         </div>
+      </div>
+
+
+
+      <section >
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Ajoyib sport buyumlari bizning saytda</h1>
+                              <p  class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/child-image.png' %}" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Ajoyib sport buyumlari bizning saytda</h1>
+                              <p  class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box ">
+                              <figure><img src="{% static 'images/child-image.png' %}" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Ajoyib sport buyumlari bizning saytda</h1>
+                              <p  class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/child-image.png' %}" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+      <!-- end about -->
+
+      <!--   start Contact Us -->
+
+      <div id="plant" class="contact_us layout_padding mt-4">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                    <h2><strong class="black"> Biz bilan</strong>  bog'lanish</h2>
+                     <span style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                     tempor incididunt ut labore et dolore magna aliqua.</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="contact_us_2 layout_padding paddind_bottom_0">
+         <div class="container">            
+               <!-- <div class="col-md-6">
+                  <div class="soc_text">soC</div>
+               </div> -->               
+                  <div class="email_btn" style="width: 50%; margin-left: 250px">
+                     <form action="/action_page.php">
+                        <div class="form-group">
+                           <input type="text" class="form-control form-control-sm" placeholder="Ism" name="Name">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Email" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Tel" name="Phone">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Xabar" name="text3">
+                        </div>
+                         <div class="submit_btn">
+                            <button type="submit" class="btn btn-primary" style="background: #081b30; color: #fff; padding: 11px;">Send</button>
+                         </div>
+                      </form>
+                  </div>
+
+               <div class="contact_us_3 layout_padding">
+            <div class="row">
+               <div class="col-md-4">
+                  <h1 style="color: #ffffff; ">Yangiliklarni olish</h1>
+                  <p class="long_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua</p>
+               </div>
+               <div class="col-md-8">
+                  <div class="email_text">
+                     <div class="input-group mb-3">
+                        <input style="border-bottom-left-radius: 20px !important; border-top-left-radius: 20px !important;" type="text" class="form-control" placeholder="Enter your email">
+                     <div class="input-group-append">
+                        <button style="border-top-right-radius: 20px !important; border-bottom-right-radius: 20px !important; color: #fff; padding-bottom: 10px; padding-top: 10px;" class="btn btn-primary" type="Subscribe">Subscribe</button>  
+                     </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+            </div>
+         </div>
+      </div>
+
+      
+    <div id="footer" class="Address layout_padding">
+       <div class="container">
+          <div class="row">
+             <div class="col-sm-12">
+               <div class="titlepage">
+                  <div class="main">
+                     <h1 class="address_text">Manzil</h1>
+                  </div>
+               </div>
+             </div>
+          </div>
+               <div class="address_2">
+                  <div class="row">
+                     <div class="col-sm-12 col-md-12 col-lg-4">
+                       <div class="site_info">
+                          <span class="info_icon"><img src="{% static 'images/map-icon.png' %}" /></span>
+                          <span style="margin-top: 10px;">Toshkent shahri</span></div>
+                     </div>
+                     <div class="col-sm-12 col-md-12 col-lg-4">
+                       <div class="site_info">
+                          <span class="info_icon"><img src="{% static 'images/phone-icon.png' %}" /></span>
+                          <span style="margin-top: 21px;">+998 99 336 70 99</span></div>
+                     </div>
+                     <div class="col-sm-12 col-md-12 col-lg-4">
+                       <div class="site_info">
+                          <span class="info_icon"><img src="{% static 'images/email-icon.png' %}" /></span>
+                          <span style="margin-top: 21px;">xbekzodcoder@gmail.com</span></div>
+                     </div>
+                     </div> 
+                  </div>
+               </div>
+                  <div class="menu_main">
+                     <div class="menu_text">
+                        <ul>
+                           <li> <a href="{% url 'shop:shop' %}">Bosh Sahifa</a> </li>
+                           <li><a href="{% url 'shop:products' %}">Mahsulotlar</a></li>
+                           <li> <a href="{% url 'shop:about' %}">Biz Haqimizda</a> </li>
+                           <li><a href="{% url 'shop:contact' %}">Bog'lanish</a></li>
+                        </ul>
+                     </div>
+                  </div>
+       </div>
+    </div>
+
+      <!-- end Contact Us-->
+
+{% endblock content %}

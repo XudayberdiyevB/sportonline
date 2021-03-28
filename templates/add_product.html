@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Product {% endblock title %}
+
+{% block content %}
+	<form action="" method="POST" name="addform" enctype="multipart/form-data" style="margin: 120px 0 100px 90px;">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit" class="btn btn-primary">Qo'shish</button>
+	</form>
+{% endblock content %}

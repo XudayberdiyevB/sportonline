@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Products {% endblock %}
+
+{% block content %}
+
+<div id="plant" class="section  product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="titlepage">
+                     <h2><strong class="black"> Sport</strong>  Mahsulotari</h2>
+                     <span>Kerakli mahsulotni tanlang</span>
+                     <button type="button" class="btn btn-primary mt-3"><a href="{% url 'shop:add' %}" style="color: #fff">+ Qo'shish</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clothes_main section ">
+    <div class="container">
+        <div class="row">
+            {% for object in objects %}
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <a href="{% url 'shop:detail' object.pk %}">
+                    <div class="sport_product">
+                        <figure><img src="{{object.image.url}}" alt="img"/></figure>
+                        <h3> <strong class="price_text">{{object.cost}}</strong></h3>
+                        <h4>{{object.name}}</h4>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

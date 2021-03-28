@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Product</title>
+</head>
+<body>
+	<p>Rostdan ham {{product}}ni o'chirmoqchimisiz!!!</p>
+	<form action="" method="POST" name="deleteform">
+		{% csrf_token %}
+		{{form.as_p}}
+		<a href="{% url 'shop:detail' product.pk %}" style="text-decoration: none;">Bekor qilish</a>
+		<button type="submit" class="btn btn-danger">O'chirish</button>
+	</form>
+</body>
+</html>
