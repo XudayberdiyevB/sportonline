@@ -379,6 +379,14 @@ ul.link li {
 .menu_text li {float: inherit;
 
 padding-left: 0px;}
+
+.my_logo {
+    margin-top: 15px;
+}
+.my_menu {
+    position: absolute;
+    top: 0;
+}
 }
 
 @media (min-width: 1200px) {
