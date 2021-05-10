@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'sportonline.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sportonlineuz',
-        'USER': 'postgres',
-        'PASSWORD': 'pgbekdev',
-        'HOST': 'localhost',
+        'NAME': 'd5b9rsg3c0pmkc',
+        'USER': 'uegideopqgdhpv',
+        'PASSWORD': '    482acd6fa52e010dd9b152551a70e9ac59f951318835c9da978be988ac327cfd',
+        'HOST': 'ec2-54-164-22-242.compute-1.amazonaws.com',
         'POST': '5432',
     }
 }
